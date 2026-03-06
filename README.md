@@ -1,0 +1,2 @@
+# router_watchdog
+当网络掉线的时候自动重启openwrt的某个网络接口
