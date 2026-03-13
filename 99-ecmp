@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# /etc/hotplug.d/iface/99-ecmp
+case "$INTERFACE" in
+    wwan5|wwan24)
+        ;;
+    *)
+        exit 0
+        ;;
+esac
+
+case "$ACTION" in
+    ifup|ifupdate)
+        /usr/bin/ecmp-watchdog.sh start
+        /usr/bin/ecmp-watchdog.sh once
+        ;;
+    ifdown)
+        /usr/bin/ecmp-watchdog.sh start
+        (
+            sleep 2
+            /usr/bin/ecmp-watchdog.sh once
+        ) &
+        ;;
+esac
+
+exit 0
