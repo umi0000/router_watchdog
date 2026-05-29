@@ -8,12 +8,12 @@
 
 # === 配置区域 ===
 API_TOKEN=""
-ZONE_ID="dce5f7531c08f48a5eee565d9d1cc357"
-DOMAIN="bdwp.ily.one" 
+ZONE_ID=""
+DOMAIN="" 
 
 # 对应接口的记录 ID
-RECORD_ID_5="f69eb764a682bdbe7dcdb3c2ed83d84c"
-RECORD_ID_24="2d9482ab8659b35a9ccfa9f122035d90"
+RECORD_ID_5=""
+RECORD_ID_24=""
 # ==============
 
 # 3. 根据当前触发事件的接口，动态决定要使用的 RECORD_ID
